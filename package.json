@@ -29,12 +29,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/shared-timer-manager.git"
+    "url": "https://github.com/dariusve/shared-timer-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/shared-timer-manager/issues"
+    "url": "https://github.com/dariusve/shared-timer-manager/issues"
   },
-  "homepage": "https://github.com/yourusername/shared-timer-manager#readme",
+  "homepage": "https://github.com/dariusve/shared-timer-manager#readme",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.55.1"
