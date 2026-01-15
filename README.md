@@ -12,6 +12,18 @@ Manage multiple timer tasks with a single SharedWebWorker. Perfect for handling 
 - ✅ **Zero Dependencies** - Lightweight and fast
 - ✅ **Framework Agnostic** - Works with React, Vue, Angular, Svelte, and vanilla JS
 
+## Why use a SharedWorker for precise timing
+
+Using a `SharedWorker` for scheduling time-sensitive tasks is often preferable to relying on `setInterval`/`setTimeout` on the main thread:
+
+- **Runs off the main thread:** timers in a `SharedWorker` are not blocked by main-thread work (UI rendering, long-running scripts), which reduces jitter and missed ticks.
+- **Less affected by event-loop blocking:** main-thread timers pause or drift when the event loop is busy; a worker provides an isolated execution context so scheduled tasks execute more reliably.
+- **Cross-tab single source of truth:** a `SharedWorker` can serve multiple tabs/windows, avoiding duplicated timers and reducing cumulative drift when the same task would otherwise run in many contexts.
+- **Better drift control:** implement a scheduling loop using `performance.now()` and compute the next tick from the intended schedule (compensating for elapsed time) to improve accuracy.
+- **Resource-efficient:** centralizing timers avoids redundant timers across contexts and reduces overall CPU usage.
+- **Background behavior:** while browsers may throttle background activity, a `SharedWorker` centralizes coordination so connectivity-dependent tasks (e.g., token refresh) remain consistent across open pages.
+
+
 ## Installation
 
 ```bash
