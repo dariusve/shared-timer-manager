@@ -1,0 +1,42 @@
+{
+  "name": "shared-timer-manager",
+  "version": "1.0.0",
+  "description": "Manage multiple timer tasks with a single SharedWebWorker",
+  "main": "dist/timer-manager.js",
+  "module": "dist/timer-manager.esm.js",
+  "types": "dist/timer-manager.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "timer",
+    "sharedworker",
+    "web-worker",
+    "task-manager",
+    "vue",
+    "react",
+    "javascript",
+    "interval",
+    "timeout"
+  ],
+  "author": "Dario Espina <me@darioespina.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/shared-timer-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/shared-timer-manager/issues"
+  },
+  "homepage": "https://github.com/yourusername/shared-timer-manager#readme",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.55.1"
+  }
+}

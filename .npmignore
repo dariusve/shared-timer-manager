@@ -1,0 +1,9 @@
+src/
+node_modules/
+.git/
+.github/
+rollup.config.js
+.DS_Store
+*.log
+examples/
+test/
