@@ -1,6 +1,6 @@
 {
   "name": "shared-timer-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manage multiple timer tasks with a single SharedWebWorker",
   "main": "dist/timer-manager.js",
   "module": "dist/timer-manager.esm.js",
